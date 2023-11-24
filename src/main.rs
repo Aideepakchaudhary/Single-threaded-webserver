@@ -31,5 +31,6 @@ fn handle_connection(mut stream: TcpStream) {
         format!("{status_line}\r\nContent-Length: {length}\r\n\r\n{contents}");
 
     stream.write_all(response.as_bytes()).unwrap();
-
 }
+
+// Now we'll covert this into multithreaded webserver
